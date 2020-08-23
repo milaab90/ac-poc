@@ -1,25 +1,21 @@
 <template>
-  <section>
-      <div class="row" v-for="card in cards" :key="card.id">
-        <p>{{card.name}}</p>
-        <img :src="card.imgThumb" />
-        <button @click="selectCard(card)">Select</button>
-      </div>
-  </section>
+    <div class="row">
+      <p>{{card.name}}</p>
+      <img :src="card.imgThumb" />
+      <button @click="selectCard(card)">Select</button>
+    </div>
 </template>
 
 <script>
 export default {
   name: 'Card',
+  props: {
+    card: Object
+  },
   methods: {
     selectCard(card) {
       this.$store.dispatch('select', card.id);
     }        
-  },
-  computed: {
-    cards() {
-      return this.$store.getters.unselectedCards;
-    }
   }
 }
 </script>
