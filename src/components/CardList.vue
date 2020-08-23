@@ -24,7 +24,7 @@ export default {
     },
     computed: {
         ...mapGetters({
-        selections: 'selections'
+            selections: 'selections'
         })
     }
 }

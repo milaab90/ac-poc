@@ -13,7 +13,7 @@ export default {
   name: 'Card',
   methods: {
     selectCard(card) {
-      this.$store.commit('select', card.id);
+      this.$store.dispatch('select', card.id);
     }        
   },
   computed: {
