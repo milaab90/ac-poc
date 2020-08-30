@@ -1,7 +1,7 @@
 <template>
     <div class="row">
-      <p>{{card.name}}</p>
-      <img :src="card.imgThumb" />
+      <p>{{card.name['name-USen']}}</p>
+      <img :src="card.image_uri" />
       <button @click="selectCard(card)">Select</button>
     </div>
 </template>
@@ -10,12 +10,12 @@
 export default {
   name: 'Card',
   props: {
-    card: Object
+    card: Object,
   },
   methods: {
     selectCard(card) {
       this.$store.dispatch('select', card.id);
-    }        
+    }    
   }
 }
 </script>

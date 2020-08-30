@@ -6,8 +6,8 @@ export default {
         card.selected = true;
         const selection = {
             cardId: card.id, 
-            name: card.name, 
-            img: card.imgThumb, 
+            name: card.name.["name-USen"], 
+            img: card.icon_uri, 
             selected: card.selected
         };
         state.selections.push(selection);
