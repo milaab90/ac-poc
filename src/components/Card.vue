@@ -1,14 +1,32 @@
 <template>
-    <div class="row">
-      <p>{{card.name['name-USen']}}</p>
-      <img :src="card.image_uri" />
+    <div>
+      <div class="cursor-pointer relative" 
+        @mouseover="hover = true"
+        @mouseleave="hover = false"
+      >
+        <p>{{card.name['name-USen']}}</p>
+        <img :src="card.image_uri" />
+        <div v-if="hover" class="absolute bottom-0 h-full w-full" :style="{ backgroundColor: card['bubble-color'], height: '256px' }">
+          <div class="flex flex-col h-full items-center justify-center w-full">
+            <p class="text-white">Personality: <span class="font-bold">{{card.personality}}</span></p>
+            <p class="text-white">Birthday: <span class="font-bold">{{card['birthday-string']}}</span></p>
+            <p class="text-white">Hobby: <span class="font-bold">{{card.hobby}}</span></p>
+          </div>
+        </div>
+      </div>
       <button @click="selectCard(card)">Select</button>
     </div>
+    
 </template>
 
 <script>
 export default {
   name: 'Card',
+  data() {
+    return {
+      hover: false,
+    };
+  },
   props: {
     card: Object,
   },
