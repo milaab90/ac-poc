@@ -6,7 +6,7 @@
       >
         <p>{{card.name['name-USen']}}</p>
         <img :src="card.image_uri" />
-        <div v-if="hover" class="absolute bottom-0 h-full w-full" :style="{ backgroundColor: card['bubble-color'], height: '256px' }">
+        <div v-if="hover" class="absolute bg-opacity-25 bottom-0 border h-full rounded-lg w-full" :style="{ backgroundColor: card['bubble-color'], height: '256px', opacity: '0.95' }">
           <div class="flex flex-col h-full items-center justify-center w-full">
             <p class="text-white">Personality: <span class="font-bold">{{card.personality}}</span></p>
             <p class="text-white">Birthday: <span class="font-bold">{{card['birthday-string']}}</span></p>
