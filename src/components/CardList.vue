@@ -1,6 +1,6 @@
 <template>
     <section class="max-w-screen-xl mx-auto">
-        <div class="flex mb-10">
+        <div class="grid grid-cols-8 gap-4 mb-10">
             <Filter-btn
                 v-for="f in cards"
                 :key="f.id"
