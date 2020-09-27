@@ -4,7 +4,7 @@
         @mouseover="hover = true"
         @mouseleave="hover = false"
       >
-        <p>{{card.name['name-USen']}}</p>
+        <p class="font-light text-xl text-center text-beige">{{card.name['name-USen']}}</p>
         <img :src="card.image_uri" />
         <div v-if="hover" class="absolute bg-opacity-25 bottom-0 border h-full rounded-lg w-full" :style="{ backgroundColor: card['bubble-color'], height: '256px', opacity: '0.95' }">
           <div class="flex flex-col h-full items-center justify-center w-full">
