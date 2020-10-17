@@ -21,5 +21,11 @@ export default {
             return selection.cardId == payload.cardId;
         })
         state.selections.splice(state.selections.indexOf(selection), 1);
+    },
+    setHighPrice(state, event) {
+        state.highprice = event
+    },
+    setHobby(state, event) {
+        state.hobby = event
     }
 }
