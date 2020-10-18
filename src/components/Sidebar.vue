@@ -1,9 +1,9 @@
 <template>
     <div class="w-full">
         <div class="w-full">
-            <label for="pricerange">Maximum Price: <span>${{ pricerange }}</span></label>
+            <label for="pricerange" class="block mb-2 text-md text-left text-darkBlue">Max. Price: <span class="font-bold font-serif">${{ pricerange }} bells</span></label>
             <input
-                class="slider"
+                class="m-priceSlider"
                 id="pricerange"
                 tabindex="0"
                 :value="pricerange"
@@ -13,11 +13,15 @@
                 step="0.1"
                 @input="updateHighPrice($event)"
             />
-            <span class="min">${{ min }}</span>
-            <span class="max">${{ max }}</span>
+            <div class="flex font-bold justify-between text-xs text-center text-darkBlue">
+                <span>${{ min }}</span>
+                <span>${{ max }}</span>
+            </div>
         </div>
-        <div class="w-full">
-            <select v-model="hobbySelect" class="w-full font-sans text-blue" @input="updateHobby($event)">
+        <span class="block border-t border-blue mt-10 mb-5 w-full"></span>
+        <div class="mt-2 w-full">
+            <label for="pricerange" class="block mb-2 text-md text-left text-darkBlue">Hobby:</label>
+            <select v-model="hobbySelect" class="border-darkBlue border bg-beige font-sans px-1 py-2 text-darkBlue w-full" @input="updateHobby($event)">
                 <option disabled selected value>- Select -</option>
                 <option :value="hobby">All Hobbies</option>
                 <option v-for="(hobby, index) in uniqueHobby" :key="index" :value="hobby">{{hobby}}</option>

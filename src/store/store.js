@@ -889,7 +889,7 @@ export const store = new Vuex.Store({
               }
             }
         ],
-        highprice: 310000,
+        highprice: 360000,
         hobby: ''
       },
     getters,
