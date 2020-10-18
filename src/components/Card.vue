@@ -10,7 +10,7 @@
             <p class="text-darkGray">Personality: <span class="font-bold">{{card.personality}}</span></p>
             <p class="text-darkGray">Birthday: <span class="font-bold">{{card['birthday-string']}}</span></p>
             <p class="text-darkGray">Hobby: <span class="font-bold">{{card.hobby}}</span></p>
-            <button @click="selectCard(card); isSelected = true" class="bg-green font-bold mt-5 px-8 py-2 rounded-lg text-beige text-lg text-center uppercase">Select</button>
+            <button @click="selectCard(card); isSelected = true" class="bg-green font-bold mt-5 px-8 py-2 rounded-lg text-beige text-lg text-center uppercase"><span class="material-icons leading-base text-xs">favorite</span> Select</button>
           </div>
         </div>
          <p class="font-light text-xl text-center text-darkBlue">{{card.name['name-USen']}}</p>
