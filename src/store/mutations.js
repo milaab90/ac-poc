@@ -8,7 +8,8 @@ export default {
             cardId: card.id, 
             name: card.name.["name-USen"], 
             img: card.icon_uri, 
-            selected: card.selected
+            selected: card.selected,
+            price: card.price
         };
         state.selections.push(selection);
     },

@@ -3,7 +3,7 @@
     <header class="mx-auto max-w-screen-xl">
       <Logo />
     </header> 
-    <section class="flex justify-between max-w-screen-xl mx-auto">
+    <section class="flex justify-between max-w-screen-xl mx-auto pb-10">
       <div class="w-2/12 mr-10">
         <Sidebar />
       </div>
