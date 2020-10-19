@@ -5,6 +5,9 @@ module.exports = {
       'sans': ['Roboto'],
       'serif': ['Bree Serif']
     },
+    fontSize: {
+      'tiny': '.67rem'
+    },
     extend: {
       colors: {
         blue: '#77C1D4',

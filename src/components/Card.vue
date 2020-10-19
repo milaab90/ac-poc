@@ -16,8 +16,7 @@
          <p class="font-light text-xl text-center text-darkBlue">{{card.name['name-USen']}}</p>
         <p class="font-bold font-serif text-md text-center text-green">${{card.price}} bells</p>
       </div>
-    </div>
-    
+    </div> 
 </template>
 
 <script>
