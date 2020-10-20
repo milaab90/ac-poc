@@ -35,7 +35,7 @@
 
 <script>
 
-import {mapGetters} from 'vuex';
+import {mapActions, mapGetters} from 'vuex';
 import Card from './Card.vue';
 import SelectedCard from './SelectedCard.vue';
 
@@ -69,6 +69,16 @@ export default {
         itemsCart() {
             return this.$store.state.selections
         }
+    },
+    created() {
+        this.loading = true
+        this.fetchCards()
+        .then(() => this.loading = false)
+    },
+    methods: {
+        ...mapActions({
+            fetchCards: 'fetchCards'
+        })
     }
 }
 </script>

@@ -1,4 +1,7 @@
 export default {
+    setCards(state,cards) {
+        state.cards = cards
+    },
     select(state, cardId) {
         const card = state.cards.find(card => {
             return card.id == cardId;
