@@ -3,7 +3,7 @@
         <div class="w-full">
             <label for="pricerange" class="block mb-2 text-md text-left text-darkBlue">Max. Price: <span class="font-bold font-serif">${{ pricerange }} bells</span></label>
             <input
-                class="m-priceSlider"
+                class="m-priceSlider w-full"
                 id="pricerange"
                 tabindex="0"
                 :value="pricerange"
